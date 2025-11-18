@@ -79,6 +79,9 @@ public class SinglyLinkedList<T> {
         }
         T removed = head.getData();
         head      = head.getNext();
+        if (head == null) {
+            tail = null;
+        }
         size--;
         return removed;
     }
