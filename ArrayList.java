@@ -1,100 +1,3 @@
-// [Executed at:Mon Nov 17 12:13:48 PST 2025]
-// ============================================================
-// ArrayList.java successfully compiled.
-// ============================================================
-// Tests Passed:10/23
-// [Test Failure:addToFront][-0.43]:IllegalArgumentException not thrown when
-// attempting to add null data to the front.
-
-// [Test Failure:addToFront][-0.43]:This addToFront test was inconclusive due
-// to:java.lang.ArrayIndexOutOfBoundsException:Index 9 out of bounds for
-// length 9.
-// Here is the stack trace to help identify the error in your code:
-//      at ArrayList.addToFront,line number:43
-
-// [Test Failure:addToFront][-0.43]:This addToFront test was inconclusive due
-// to:java.lang.ArrayIndexOutOfBoundsException:Index 18 out of bounds for
-// length 18. Here is the stack trace to help identify the error in your code:
-//      at ArrayList.addToFront,line number:43
-
-// [Test Failure:addToBack][-0.43]:IllegalArgumentException not thrown when
-// attempting to add null data to the back.
-
-// [Test Failure:addToBack][-0.43]:This addToBack test was inconclusive due
-// to:java.lang.ArrayIndexOutOfBoundsException:Index 9 out of bounds for
-// length 9. Here is the stack trace to help identify the error in your code:
-//      at ArrayList.addToBack,line number:59
-
-// [Test Failure:addToBack][-0.43]:This addToBack test was inconclusive due
-// to:java.lang.ArrayIndexOutOfBoundsException:Index 18 out of bounds for
-// length 18. Here is the stack trace to help identify the error in your code:
-//      at ArrayList.addToBack,line number:59
-
-// [Test Failure:removeFromFront][-0.43]:NoSuchElementException not thrown when
-// attempting to remove from the front an empty ArrayList.
-
-// [Test Failure:removeFromFront][-0.43]:Unexpected content after removing the
-// only element from the front.
-//      Expected:[null,null,null,null,null,null,null,null,null]
-//      Actual:  [0 a,null,null,null,null,null,null,null,null]
-
-// [Test Failure:removeFromFront][-0.43]:Unexpected content after removing once
-// from the front.
-//      Expected:[1 a,2 a,3 a,4 a,5 a,null,null,null,null]
-//      Actual:  [1 a,2 a,3 a,4 a,5 a,5 a,null,null,null]
-
-// [Test Failure:removeFromFront][-0.43]:Unexpected content after removing once
-// from the front of a full ArrayList.
-//      Expected:[1 a,2 a,3 a,4 a,5 a,6 a,7 a,8 a,null]
-//      Actual:  [1 a,2 a,3 a,4 a,5 a,6 a,7 a,8 a,8 a]
-
-// [Test Failure:removeFromFront][-0.43]:Unexpected content after removing once
-// from the front of a resized ArrayList.
-//      Expected:[1 a,2 a,3 a,4 a,5 a,6 a,7 a,8 a,9
-//      a,null,null,null,null,null,null,null,null]
-
-//      Actual:  [1 a,2 a,3 a,4 a,5 a,6 a,7 a,8 a,9 a,9
-//      a,null,null,null,null,null,null,null,null]
-
-// [Test Failure:removeFromBack][-0.43]:NoSuchElementException not thrown when
-// attempting to remove from the back of an empty ArrayList.
-
-// [Test Failure:validSize][-0.43]:Size variable could not be validated for the
-// following method(s)due to early test
-//      failure(s):removeFromBack,addToBack,addToFront.
-
-// Score:4.35/10.0============================================================
-
-// [Executed at: Mon Nov 17 12:44:03 PST 2025]
-
-// ============================================================
-// ArrayList.java successfully compiled.
-// ============================================================
-// Tests Passed: 17 / 23
-
-// [Test Failure: removeFromFront] [-0.43] : Unexpected content after removing once from the front.
-// 	Expected : [1a, 2a, 3a, 4a, 5a, null, null, null, null]
-// 	Actual : [null, 2a, 3a, 4a, 5a, 5a, null, null, null]
-
-// [Test Failure: removeFromFront] [-0.43] : Unexpected content after removing once from the front of a full ArrayList.
-// 	Expected : [1a, 2a, 3a, 4a, 5a, 6a, 7a, 8a, null]
-// 	Actual : [null, 2a, 3a, 4a, 5a, 6a, 7a, 8a, 8a]
-
-// [Test Failure: removeFromFront] [-0.43] : Unexpected content after removing once from the front of a resized ArrayList.
-// 	Expected : [1a, 2a, 3a, 4a, 5a, 6a, 7a, 8a, 9a, null, null, null, null, null, null, null, null, null]
-// 	Actual : [null, 2a, 3a, 4a, 5a, 6a, 7a, 8a, 9a, 9a, null, null, null, null, null, null, null, null]
-
-// [Test Failure: removeFromBack] [-0.43] : This removeFromBack test was inconclusive due to: java.lang.ArrayIndexOutOfBoundsException: Index 9 out of bounds for length 9
-// Here is the stack trace to help identify the error in your code:
-// 	at ArrayList.removeFromBack, line number: 126
-
-// [Test Failure: validSize] [-0.43] : Size variable could not be validated for the following method(s) due to early test failure(s): removeFromBack.
-
-// [Test Failure: validData] [-0.43] : Returned data could not be validated for the following method(s) due to early test failure(s): removeFromBack.
-
-// Score: 7.39 / 10.0
-// ============================================================
-
 /**
  * Your implementation of an ArrayList.
  */
@@ -218,7 +121,7 @@ public class ArrayList<T> {
         if (size == 0) {
             throw new java.util.NoSuchElementException("List is empty");
         }
-        T removed = backingArray[size - 1];
+        T removed              = backingArray[size - 1];
         backingArray[size - 1] = null;
         size--;
         return removed;
